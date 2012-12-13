@@ -23,7 +23,8 @@ Gem::Specification.new do |gem|
   ]
 
   gem.required_ruby_version = "~> 1.9"
-  gem.add_dependency "crypt19", "~> 1.2"
+  gem.add_dependency "encryptor", "~> 1.1"
+  gem.add_dependency "bcrypt-ruby", "~> 3.0"
   gem.add_development_dependency "fuubar", "~> 1.1"
   gem.add_development_dependency "rake", "~> 10.0"
   gem.add_development_dependency "rdoc", "~> 3.12"
