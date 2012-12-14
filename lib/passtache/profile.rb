@@ -86,6 +86,6 @@ class Passtache::Profile
   # Saves the account to a YAML file.
   def save
     Dir.mkdir DATA_DIR unless Dir.exists?(DATA_DIR)
-    File.open("#{DATA_DIR}/#{@name}.stache", "w") { |f| f << self.to_yaml }
+    IO.write "#{DATA_DIR}/#{@name}.stache", self.to_yaml
   end
 end
