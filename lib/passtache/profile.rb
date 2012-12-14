@@ -1,4 +1,4 @@
-require "bcrypt"
+require "scrypt"
 require "encryptor"
 
 class Passtache::Profile
@@ -14,7 +14,7 @@ class Passtache::Profile
   # @param [String] master the master password
   def initialize(name, master)
     @name = name
-    @master_hash = BCrypt::Password.create(master).to_s
+    @master_hash = SCrypt::Password.create(master).to_s
     @accounts = {}
 
     save
