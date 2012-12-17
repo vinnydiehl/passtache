@@ -2,6 +2,9 @@ require "spec_helper"
 require "passtache/profile"
 
 describe Profile do
+  # Clean any existing temporary profiles before anything beings.
+  before(:all) { cleanup_temp_profiles }
+
   let!(:profile) { new_temp_profile }
   after(:each) { cleanup_temp_profiles }
 
